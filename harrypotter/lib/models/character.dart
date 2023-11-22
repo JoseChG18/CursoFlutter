@@ -1,4 +1,5 @@
 class Character {
+  final int id;
   final String name;
   final String url;
   double totalStars;
@@ -14,7 +15,8 @@ class Character {
   }
 
   Character(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.url,
       required this.totalStars,
       required this.reviews,
@@ -22,7 +24,7 @@ class Character {
       required this.magic,
       required this.speed});
 
-  void addReview( int value){
+  void addReview(int value){
     reviews++;
     totalStars += value;
   }
